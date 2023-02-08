@@ -1,0 +1,257 @@
+@charset "utf-8";
+/*---------------------------------------------------------------------
+　home page
+---------------------------------------------------------------------*/
+
+.p-top__sport--bloc {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.p-top__news--bloc {
+    padding: 50px 0;
+    position: relative;
+
+    &__row {
+        display: inline-flex;
+        flex-flow: column wrap;
+        width: 100%;
+        height: 423px;
+
+        .new--bloc__card {
+            display: flex;
+            align-items: baseline; 
+            justify-content: flex-end;
+            flex-direction: column;
+            position: relative;
+            border-bottom: 1px solid $borderRed;
+
+            .img--box {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $secondaryBgColor;
+
+                a {
+                    display: inline-block;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .txt--box {
+                width: 100%;
+                position: relative;
+                background-color: rgba($pirmaryBgColor, 0.8);
+
+                &__inner {
+                    padding: 10px 20px 10px;
+                    
+                    h3 {
+                        font-family: 'Georgia';
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 31px;
+                        color: $whiteColor;
+                        word-break: break-word;
+                    }
+
+                    p {
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.1px;
+                        color: $whiteColor;
+                        word-wrap: wrap;
+                    }
+                }
+            }
+        }
+
+        .large-item {
+            background: #eee;
+            margin-right: 10px;
+            flex-basis: 100%; 
+            width: 540px;
+            border-color: $borderGreen;
+        }
+        
+        .item {
+            margin: 0 0 2% 2%;
+            background: #ddd;
+            margin-bottom: 10px;
+            flex: 1 0 31%; 
+            min-height: 150px;
+
+            .img--box {
+                max-width: 255px;
+            }
+
+            .txt--box {
+                max-width: 255px;
+
+                h3 {
+                    font-size: 18px;
+                    line-height: 27px;
+                    letter-spacing: 0.063px;
+                }
+            }
+
+            &:nth-child(3) {
+                border-color: $borderBlue;
+                max-height: 100px;
+                margin-bottom: 0;
+
+                .img--box {
+                    display: none;
+                }
+
+                .txt--box {
+                    height: 100%;
+                    background-color: $secondaryBgColor;
+                }
+            }
+
+            &:nth-child(4) {
+                border-color: $borderYellow;
+            }
+
+            &:nth-child(5) {
+                border-color: $borderGreen;
+                max-height: 100px;
+                margin-bottom: 0;
+
+                .img--box {
+                    display: none;
+                }
+
+                .txt--box {
+                    height: 100%;
+                    background-color: $secondaryBgColor;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .p-top__news--bloc {
+
+        &__row {
+            flex-flow: row wrap;
+            // flex-direction: column-reverse;
+            margin-top: 20px;
+            height: auto;
+
+            .img--box {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $secondaryBgColor;
+
+                a {
+                    display: inline-block;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .txt--box {
+
+                &__inner {
+                    padding: 10px 20px 10px;
+                    
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .large-item {
+                flex: 1 0 31%;
+                margin: 0 0 30px 0;
+                width: 100%;
+                height: auto;
+            }
+
+            .item {
+                min-height: 350px;
+                max-height: 100% !important;
+                margin: 0 0 30px 15px;
+
+                .img--box,
+                .txt--box {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                .img--box {
+                    // min-height: 200px;
+                }
+
+                &:nth-child(3),
+                &:nth-child(5) {
+                    max-height: 100%;
+                    min-height: 350px;
+                    margin: 0 0 30px 15px;
+                    
+                    .img--box {
+                        display: flex;
+                    }
+
+                    .txt--box {
+                        height: auto;
+                        // min-height: auto;
+                        max-height: auto;
+                        background-color: rgba($pirmaryBgColor, 0.8);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .p-top__news--bloc {
+
+        &__row {
+            // flex-flow: column nowrap;
+            flex-direction: column;
+            margin-top: 20px;
+
+            .large-item {
+                min-height: 350px;
+                margin: 0 0 10px 0;
+
+                p {
+                    display: none;
+                }
+            }
+
+            .item {
+                margin: 0 0 10px 0;
+                min-height: 350px;
+
+                &:nth-child(3),
+                &:nth-child(5) {
+                    margin: 0 0 10px 0;
+                }
+            }
+
+        }
+    }
+}

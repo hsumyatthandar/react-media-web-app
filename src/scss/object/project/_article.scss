@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*---------------------------------------------------------------------
+　article page
+---------------------------------------------------------------------*/
+
+.p-article--bloc {
+    position: relative;
+    
+
+    &__inner {
+        display: flex;
+
+        .content--wrap {
+            flex-basis: 100%;
+
+            &__inner {
+                padding: 30px 0;
+
+                .date {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 31px;
+                    letter-spacing: 0.83px;
+                    text-transform: uppercase;
+    
+                    color: rgba($blackColor, 0.87);
+                }
+
+                h2 {
+                    font-family: 'Georgia';
+                    font-weight: 700;
+                    font-size: 34px;
+                    line-height: 39px;
+                    letter-spacing: 0.07px;
+                    color: rgba($blackColor, 0.87);
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+                    font-family: 'Georgia';
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 26px;
+                    letter-spacing: 0.07px;
+
+                    color: rgba($blackColor, 0.87);
+                }
+
+                .body-text {
+                    text-align: justify;
+                    padding: 10px 20px 0 0;
+                    align-items: center;
+
+                    p {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        .img--wrap {
+            flex:1 0 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__innter {
+                img {
+                    width: 100%;
+                }
+            }
+
+            
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .p-article--bloc {
+
+        &__inner {
+            flex-flow: column nowrap;
+            flex-direction: column-reverse;
+            margin-top: 20px;
+        }
+    }
+}

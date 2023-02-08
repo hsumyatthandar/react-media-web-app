@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import '../../utility/mixin';
+@import '../../utility/setting';
+
+/*---------------------------------------------------------------------
+　card
+---------------------------------------------------------------------*/
+
+.c-bookmark--btn {
+    background: $pirmaryBgColor url('../img/bookmarkon-icon.svg') no-repeat;
+    background-position: left 20px center;
+    padding: 10px 25px 10px 45px;
+    color: $whiteColor;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    display: inline-block;
+    @include border-radius(5px);
+}

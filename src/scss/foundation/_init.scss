@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import '../utility/setting';
+
+a img {
+  border-style: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+img {
+   width: 100%;
+}
+
+body {
+  text-align: left;
+  line-height: 1.5;
+}
+html {
+  position: relative;
+}
+html,
+body {
+  height: 100%;
+  background-color: none !important;
+  font-family: 'Roboto';
+  color: rgba($blackColor, 0.87);
+  -webkit-text-size-adjust: none;
+  word-break: break-word;
+}
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
